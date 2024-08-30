@@ -14,9 +14,9 @@ import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     // Declaración de las variables globales
-    private lateinit var iniciarSesionBtn: Button
-    private lateinit var correoInput: EditText
-    private lateinit var contrasenaInput: EditText
+    private lateinit var registrarBtn: Button
+    private lateinit var registroCorreoInput: EditText
+    private lateinit var registroContrasenaInput: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Inicialización de las vistas
-        iniciarSesionBtn = findViewById(R.id.iniciar_sesion_btn)
-        correoInput = findViewById(R.id.ingreso_correo_input)
-        contrasenaInput = findViewById(R.id.ingreso_contrasena_input)
+        registrarBtn = findViewById(R.id.registrarse_btn)
+        registroCorreoInput = findViewById(R.id.registro_correo_input)
+        registroContrasenaInput = findViewById(R.id.registro_contrasena_input)
 
         // Manejo de insets para la barra de sistema
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -52,8 +52,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun setup() {
         title = "Autenticación"
-        // Listener para el botón de iniciar sesión
-        iniciarSesionBtn.setOnClickListener {
+        // Listener para el botón de registrar
+        registrarBtn.setOnClickListener {
             if (correoInput.text.isNotEmpty() && contrasenaInput.text.isNotEmpty()) {
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(
                     correoInput.text.toString(), contrasenaInput.text.toString()

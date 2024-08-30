@@ -42,7 +42,8 @@
             android:background="@drawable/rectangulo_ingrese_texto"
             android:padding="18dp"
             android:inputType="textEmailAddress"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:id="@+id/registro_correo_input"/>
 
         <EditText
             android:layout_width="350dp"
@@ -56,7 +57,8 @@
             android:background="@drawable/rectangulo_ingrese_texto"
             android:padding="18dp"
             android:inputType="text"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:id="@+id/registro_usuario_input"/>
 
         <EditText
             android:layout_width="350dp"
@@ -70,21 +72,9 @@
             android:background="@drawable/rectangulo_ingrese_texto"
             android:padding="18dp"
             android:inputType="textPassword"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:id="@+id/registro_contrasena_input"/>
 
-        <EditText
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="@string/confirmar_contrasena"
-            android:autofillHints="password"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp"
-            android:background="@drawable/rectangulo_ingrese_texto"
-            android:padding="18dp"
-            android:inputType="textPassword"
-            android:layout_gravity="center"/>
 
         <Button
             android:layout_width="320dp"

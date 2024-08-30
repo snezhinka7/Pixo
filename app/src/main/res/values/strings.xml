@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Pixo</string>
+    <string name="inicia_sesion">Inicia Sesión</string>
+    <string name="ingrese_su_contraseña">Ingrese su contraseña</string>
+    <string name="ingrese_su_usuario">Ingrese su usuario</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="accede_desde_tu_cuenta">¡Accede desde tu cuenta!</string>}
+    <string name="resgistrate">¿No tienes una cuenta? Registrate</string>
 </resources>

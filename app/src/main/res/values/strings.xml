@@ -6,6 +6,8 @@
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="accede_desde_tu_cuenta">¡Accede desde tu cuenta!</string>}
     <string name="resgistrate">¿No tienes una cuenta? Registrate</string>
+
+
     <string name="registro">Registro</string>
     <string name="coreo_registro">Ingrese un correo</string>
     <string name="nombre_usuario_registro">Ingrese un nombre para su usuario</string>
@@ -13,4 +15,7 @@
     <string name="confirmar_contrasena">Escriba nuevamente su contraseña</string>
     <string name="registrarse">Registrarse</string>
     <string name="volver_registro_a_login">Volver a Inicio de Sesion</string>
+
+    <string name="menu_principal">Menu Principal</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
 </resources>

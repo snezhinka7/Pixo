@@ -13,9 +13,12 @@
         android:theme="@style/Theme.Pixo"
         tools:targetApi="31">
         <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegistroLoginActivity"
             android:exported="false"
-            android:launchMode="singleInstance"/>
+            android:launchMode="singleInstance" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

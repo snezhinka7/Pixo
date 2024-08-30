@@ -11,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var ingresarUsuarioInput: EditText
+    private lateinit var ingresarCorreoInput: EditText
     private lateinit var ingresarContrasenaInput: EditText
     private lateinit var iniciarSesionBtn: Button
 
@@ -20,14 +20,14 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        ingresarUsuarioInput = findViewById(R.id.ingreso_usuario_input)
+        ingresarCorreoInput = findViewById(R.id.ingreso_correo_input)
         ingresarContrasenaInput = findViewById(R.id.ingreso_contrasena_input)
         iniciarSesionBtn = findViewById(R.id.iniciar_sesion_btn)
 
         iniciarSesionBtn.setOnClickListener {
-            val usuario = ingresarUsuarioInput.text.toString()
+            val correo = ingresarCorreoInput.text.toString()
             val contrasena = ingresarContrasenaInput.text.toString()
-            Log.i("Testeo Inicio Sesion", "Usuario : $usuario and Contrasena : $contrasena")
+            Log.i("Testeo Inicio Sesion", "Correo : $correo and Contrasena : $contrasena")
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

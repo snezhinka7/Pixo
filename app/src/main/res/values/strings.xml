@@ -2,8 +2,14 @@
     <string name="app_name">Pixo</string>
     <string name="inicia_sesion">Inicia Sesión</string>
     <string name="ingrese_su_contraseña">Ingrese su contraseña</string>
-    <string name="ingrese_su_usuario">Ingrese su usuario</string>
+    <string name="ingrese_su_correo">Ingrese su correo</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="accede_desde_tu_cuenta">¡Accede desde tu cuenta!</string>}
     <string name="resgistrate">¿No tienes una cuenta? Registrate</string>
+    <string name="registro">Registro</string>
+    <string name="coreo_registro">Ingrese un correo</string>
+    <string name="nombre_usuario_registro">Ingrese un nombre para su usuario</string>
+    <string name="contrasena_registro">Ingrese una contraseña</string>
+    <string name="confirmar_contrasena">Escriba nuevamente su contraseña</string>
+    <string name="registrarse">Registrarse</string>
 </resources>

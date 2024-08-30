@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    tools:context=".MainActivity">
+    tools:context=".RegistroLoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,33 +16,25 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/inicia_sesion"
+            android:text="@string/registro"
             android:textColor="@color/white"
             android:textSize="40sp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_gravity="center"/>
 
         <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_gravity="center"
-            android:src="@drawable/icon_login_circulo"
-            android:contentDescription="@null"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/resgistrate"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-            android:layout_marginTop="8dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="30dp"
+            android:src="@drawable/new_user"
+            android:contentDescription="@null"
             android:layout_gravity="center"/>
 
         <EditText
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:hint="@string/ingrese_su_correo"
+            android:layout_marginTop="30dp"
+            android:hint="@string/coreo_registro"
             android:autofillHints="emailAddress"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -50,14 +42,27 @@
             android:background="@drawable/rectangulo_ingrese_texto"
             android:padding="18dp"
             android:inputType="textEmailAddress"
-            android:id="@+id/ingreso_correo_input"
             android:layout_gravity="center"/>
 
         <EditText
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="@string/ingrese_su_contraseña"
+            android:layout_marginTop="15dp"
+            android:hint="@string/nombre_usuario_registro"
+            android:autofillHints="username"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:background="@drawable/rectangulo_ingrese_texto"
+            android:padding="18dp"
+            android:inputType="text"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="@string/contrasena_registro"
             android:autofillHints="password"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -65,55 +70,33 @@
             android:background="@drawable/rectangulo_ingrese_texto"
             android:padding="18dp"
             android:inputType="textPassword"
-            android:id="@+id/ingreso_contrasena_input"
             android:layout_gravity="center"/>
-        
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="@string/confirmar_contrasena"
+            android:autofillHints="password"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:background="@drawable/rectangulo_ingrese_texto"
+            android:padding="18dp"
+            android:inputType="textPassword"
+            android:layout_gravity="center"/>
+
         <Button
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:text="@string/iniciar_sesion"
+            android:text="@string/registrarse"
             android:backgroundTint="@color/white"
             android:textColor="#D35400"
             android:padding="18dp"
             android:layout_marginTop="32dp"
             android:textSize="20sp"
-            android:id="@+id/iniciar_sesion_btn"
+            android:id="@+id/registrarse_btn"
             android:layout_gravity="center"/>
-        
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/accede_desde_tu_cuenta"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-            android:layout_marginTop="32dp"
-            android:layout_gravity="center"/>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_margin="16dp"
-                android:src="@drawable/facebook"
-                android:contentDescription="@null"/>
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_margin="16dp"
-                android:src="@drawable/google"
-                android:contentDescription="@null"/>
-
-        </LinearLayout>
-
-
 
 
     </LinearLayout>

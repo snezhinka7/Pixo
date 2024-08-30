@@ -38,7 +38,7 @@
             android:layout_gravity="center"/>
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:hint="Ingrese su usuario"
@@ -47,10 +47,12 @@
             android:textSize="20sp"
             android:background="@drawable/rectangulo_ingrese_texto"
             android:padding="18dp"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:id="@+id/ingreso_usuario_input"
+            android:layout_gravity="center"/>
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Ingrese su contraseña"
@@ -60,10 +62,11 @@
             android:background="@drawable/rectangulo_ingrese_texto"
             android:padding="18dp"
             android:inputType="textPassword"
-            android:id="@+id/password_input" />
+            android:id="@+id/ingreso_contrasena_input"
+            android:layout_gravity="center"/>
         
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:text="Iniciar Sesion"
             android:backgroundTint="@color/white"
@@ -71,7 +74,8 @@
             android:padding="18dp"
             android:layout_marginTop="32dp"
             android:textSize="20dp"
-            android:id="@+id/login_btn"/>
+            android:id="@+id/iniciar_sesion_btn"
+            android:layout_gravity="center"/>
         
         <TextView
             android:layout_width="wrap_content"

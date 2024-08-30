@@ -98,6 +98,15 @@
             android:id="@+id/registrarse_btn"
             android:layout_gravity="center"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volver_registro_a_login"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:id="@+id/volver_registro_login"/>
 
     </LinearLayout>
 

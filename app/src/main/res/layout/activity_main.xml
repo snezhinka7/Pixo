@@ -36,7 +36,8 @@
             android:textSize="18sp"
             android:textColor="@color/white"
             android:layout_marginTop="8dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:id="@+id/ir_a_registro"/>
 
         <EditText
             android:layout_width="350dp"

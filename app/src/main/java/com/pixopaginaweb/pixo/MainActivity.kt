@@ -1,9 +1,11 @@
 package com.pixopaginaweb.pixo
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var ingresarCorreoInput: EditText
     private lateinit var ingresarContrasenaInput: EditText
     private lateinit var iniciarSesionBtn: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +39,17 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val irAResgistro = findViewById<TextView>(R.id.ir_a_registro)
+        irAResgistro.setOnClickListener {
+            irRegistro()
+
+        }
     }
+
+    private fun irRegistro() {
+        val i = Intent (this, RegistroLoginActivity::class.java)
+        startActivity(i)
+    }
+
 }
 

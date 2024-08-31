@@ -12,6 +12,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 
+import com.google.firebase.FirebaseApp
+
 class MainActivity : AppCompatActivity() {
     // Declaración de las variables globales
     private lateinit var registrarBtn: Button
@@ -20,21 +22,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        FirebaseApp.initializeApp(this)  // Inicializa Firebase
         setContentView(R.layout.activity_main)
 
-        // Inicialización de las vistas
-        registrarBtn = findViewById(R.id.registrarse_btn)
-        registroCorreoInput = findViewById(R.id.registro_correo_input)
-        registroContrasenaInput = findViewById(R.id.registro_contrasena_input)
 
-        // Manejo de insets para la barra de sistema
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
 
+        // Llama a setup() después de inicializar las vistas
         setup()
 
         // Configuración del TextView para redirigir al registro
@@ -54,23 +47,23 @@ class MainActivity : AppCompatActivity() {
         title = "Autenticación"
         // Listener para el botón de registrar
         registrarBtn.setOnClickListener {
-            if (correoInput.text.isNotEmpty() && contrasenaInput.text.isNotEmpty()) {
-                FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                    correoInput.text.toString(), contrasenaInput.text.toString()
+            if (registroCorreoInput.text.isNotEmpty() && registroContrasenaInput.text.isNotEmpty()) {
+                FirebaseAuth.getInstance().createUserWithEmailAndPassword(
+                    registroCorreoInput.text.toString(), registroContrasenaInput.text.toString()
                 ).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        showHome(correoInput.text.toString())
+                        showHome(registroCorreoInput.text.toString())
                     } else {
-                        showAlert()
+                        showAlert("Error al crear la cuenta")
                     }
                 }
             } else {
-                showAlert()
+                showAlert("Por favor, complete todos los campos")
             }
         }
     }
 
-    private fun showAlert(message: String = "Se ha producido un error autenticando el usuario") {
+    private fun showAlert(message: String) {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
         builder.setMessage(message)
@@ -79,10 +72,10 @@ class MainActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showHome(correoInput: String) {
+    private fun showHome(registroCorreoInput: String) {
         // Lógica para mostrar la pantalla principal después de la autenticación exitosa
         val homeIntent = Intent(this, HomeActivity::class.java).apply {
-            putExtra("email", correoInput)
+            putExtra("email", registroCorreoInput)
         }
         startActivity(homeIntent)
     }

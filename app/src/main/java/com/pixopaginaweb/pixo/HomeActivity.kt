@@ -12,6 +12,10 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import org.w3c.dom.Text
 
+enum class ProviderType{
+    BASIC
+}
+
 class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
